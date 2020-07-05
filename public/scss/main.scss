@@ -1,0 +1,1902 @@
+//colors
+$blue: #1144D8;
+$blue-top: #1046DE;
+$blue-d: #0B2F96;
+$blue-b: #011E6F;
+$blue-a: #51a6ff;
+$white: #fff;
+$yellow: #FCEE21;
+$yellow-o: #BFB523;
+$pink: #E8385C;
+$dark: #000;
+
+
+// media
+@mixin xxs {
+    @media (max-width: 320px) { @content; }
+}
+@mixin xs {
+    @media (max-width: 414px) { @content; }
+}
+@mixin sm {
+    @media (max-width: 768px) { @content; }
+}
+@mixin md {
+    @media (max-width: 900px) { @content; }
+}
+@mixin xl {
+    @media (max-width: 1200px) { @content; }
+}
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background: $blue;
+    background: linear-gradient(180deg, #01377b 0, #000000 78%);
+}
+a {
+    text-decoration: none;
+}
+
+.area_1 {
+    position: absolute;
+    background: linear-gradient(90deg, #012e69 1.22%, #012e68 35.91%, #FCEE21 80.52%);
+    width: 100%;
+    height: 56px;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    margin: 0;
+    @include xl {
+        margin: 0 10px;
+    }
+    @include sm {
+        background: linear-gradient(90deg, #013373 1.22%, #013374 35.91%, #FCEE21 80.52%);
+    }
+    @include xs {
+        margin: 0;
+        display: none;
+    }
+}
+
+
+.area_2 {
+    position: absolute;
+    background: linear-gradient(90deg, #022f6a 1.22%, #022e68 35.91%, #FFFFFF 80.52%);
+    width: 100%;
+    height: 46px;
+    top: 56px;
+    left: 0;
+    z-index: -1;
+    margin: 0;
+    @include xl {
+        margin: 0 10px;
+    }
+    @include sm {
+        background: linear-gradient(90deg, #013373 1.22%, #013374 35.91%, #FFFFFF 80.52%);
+        height: 22px;
+    }
+    @include xs {
+        margin: 0;
+        display: none;
+    }
+}
+
+
+header {
+    display: flex;
+    width: 1170px;
+    margin: 0 auto;
+    z-index: 1;
+    position: relative;
+    @include xl {
+        width: 900px;
+    }
+    @include sm {
+        width: 414px;
+    }
+    @include xs { 
+        width: 375px;
+    }
+    @include xxs {
+        width: 320px;
+    }
+}
+
+section {
+    width: 1170px;
+    margin: 0 auto;
+    @include xl {
+        width: 900px;
+    }
+    @include md {
+        width: 768px;
+    }
+    @include sm {
+        width: 414px;
+    }
+    @include xs {
+        width: 360px;
+    }
+    @include xxs {
+        width: 290px;
+    }
+
+}
+
+.menu {
+    width: 100%;
+}
+
+.img_container {
+    padding-top: 15px;
+    width: 230px;
+    text-align: center;
+    z-index: 999;
+    img {
+        height: auto;
+    }
+    @include sm {
+        width: 200px;
+        img {
+            height: 50px;
+        }
+    }
+}
+
+.menu_top {
+    display: flex;
+    justify-content: center;
+    font-family: 'Proxima Nova Lt';
+    font-weight: 600;
+    background: $yellow;
+    padding: 16px 0;
+    position: relative;
+    z-index: 1;
+    align-items: center;
+    &::before {
+        content: '';
+        width: 30px; 
+        height: 56px;
+        transform: skewX(-25deg);
+        background: $yellow;
+        position: absolute;
+        top: 0;
+        left: -12px;
+        z-index: -1;
+    }
+    @include sm {
+        justify-content: space-around;
+        padding: 13px 0;
+    }
+}
+
+.menu_top_btn {
+   display: flex;
+   width: 100%;
+   @include sm {
+       display: none;
+   }
+}
+
+
+
+.menu_top_site {
+    span {
+        color: $blue;
+        font-size: 16px;
+        display: flex;
+        img {
+            vertical-align: middle;
+            padding-right: 10px;
+        }
+    }
+    @include sm {
+        order: 1;
+    }
+}
+
+
+nav {
+    ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        margin: 0;
+        li {
+            padding: 0 20px;
+            a {
+                color: $yellow-o;
+            }
+        }
+    }
+}
+
+nav a.active {
+    color: $blue-d;
+}
+
+.menu_bottom {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 11px 0;
+    background: $white;
+    position: relative;
+    &::before {
+        content: '';
+        width: 47px;
+        height: 45px;
+        transform: skewX(-25deg);
+        background: $white;
+        position: absolute;
+        top: -1px;
+        left: -35px;
+        z-index: -1;
+        @include sm {
+            height: 23px;
+            left: -30px;
+        }
+    }
+}
+
+.menu_top_games {
+    display: flex;
+    width: 100%;
+    font-family: 'Proxima Nova Lt';
+    font-weight: 600;
+    @include sm {
+        justify-content: space-around;
+    }
+}
+
+
+.match_data {
+    display: flex;
+    justify-content: start;
+    width: 100%;
+    @include xl {
+        width: 100%;
+    }
+    @include sm {
+        display: none;
+    }
+}
+
+.match_data_start {
+    font-family: 'Proxima Nova Th';
+    font-weight: 800;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: $blue;
+    padding: 0 20px;
+    span {
+        font-family: 'Proxima Nova Lt';
+        font-weight: 600;
+    }
+}
+
+.match_data_end {
+    font-family: 'Proxima Nova Th';
+    font-weight: 800;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: $pink;
+    span {
+        font-family: 'Proxima Nova Lt';
+        font-weight: 600;
+    }
+}
+
+.atation {
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'Proxima Nova Lt';
+    font-weight: 600;
+    align-items: center;
+    padding: 27px 0;
+    justify-content: space-around;
+    width: 95%;
+    margin: 0 auto;
+    @include xl {
+        width: 70%;
+    }
+    @include xs {
+        text-align: center;
+        width: 100%;
+    }
+}
+
+.atation_sea {
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'Proxima Nova Lt';
+    font-weight: 600;
+    align-items: center;
+    padding: 27px 0;
+    justify-content: space-around;
+    width: 89%;
+    margin: 0 auto;
+    @include xl {
+        width: 59%;
+    }
+    @include xs {
+        text-align: center;
+        width: 100%;
+    }
+    .atation_title {
+        color: $white;
+        font-size: 14px;
+        text-transform: uppercase;
+    }
+}
+
+.slide_tounament {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 340px;
+    @include sm {
+        height: auto;
+    }
+}
+
+.atation_title {
+    color: $white;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+
+.atation_links {
+    display: flex;
+    .net-top {
+        display: block;
+        color: $white;
+        font-size: 14px;
+        width: 103px;
+        @include sm {
+            padding-top: 20px;
+        }
+    }
+}
+
+.main {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    @include xl {
+        flex-wrap: wrap;
+    }
+}
+
+.tab_content_item {
+    display: none;
+    padding: 20px;
+    margin-top: -1px;
+}
+
+.tab_content_item.active {
+    display: block;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    @include sm {
+        flex-wrap: wrap;
+    }
+}
+
+.tab_header {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    @include sm {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+}
+
+.tab_content {
+    padding: 0;
+    margin: 0;
+}
+
+.tab_header_item {
+    color: $yellow;
+    font-family: 'Proxima Nova Lt';
+    margin-bottom: 1px;
+    padding: 0 10px;
+    background: $blue-d;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 77px;
+    &:hover {
+        cursor: pointer;
+        background: $yellow;
+        transition: .3s;
+        color: $blue;
+        .ic1 {
+            background: url(../icon/overview-b.svg) no-repeat;
+            background-position: center 25%;
+        }
+        .ic2 {
+            background: url(../icon/participants-b.svg) no-repeat;
+            background-position: center 25%;
+        }
+        .ic3 {
+            background: url(../icon/matches-b.svg) no-repeat;
+            background-position: center 25%;
+        }
+        .ic4 {
+            background: url(../icon/highlights-b.svg) no-repeat;
+            background-position: center 25%;
+        }
+        .ic6 {
+            background: url(../icon/news-b.svg) no-repeat;
+            background-position: center 25%;
+        }
+    }
+    .ic1 {
+        background: url(../icon/overview.svg) no-repeat;
+        background-position: center 25%;
+    }
+    .ic2 {
+        background: url(../icon/participants.svg) no-repeat;
+        background-position: center 25%;
+    }
+    .ic3 {
+        background: url(../icon/matches.svg) no-repeat;
+        background-position: center 25%;
+    }
+    .ic4 {
+        background: url(../icon/highlights.svg) no-repeat;
+        background-position: center 25%;
+    }
+    .ic6 {
+        background: url(../icon/news.svg) no-repeat;
+        background-position: center 25%;
+    }
+    span {
+        padding-top: 15px;
+    }
+    @include sm {
+        margin: 10px;
+        width: 166px;
+    }
+    @include xs {
+        width: 120px;
+    }
+    @include xxs {
+        width: 35%;
+    }
+}
+
+.slide-1, .slide-2 {
+    width: 694px;
+    height: 406px;
+    box-shadow: 0px 0px 0px 1px $yellow;
+    background: $blue-b;
+    @include md {
+        width: 600px;
+    }
+    @include sm {
+        width: 414px;
+        height: auto;
+    }
+    @include xs {
+        width: 340px;
+    }
+    @include xxs {
+        width: 290px;
+    }
+}
+
+.owl-nav {
+    position: absolute;
+    top: 40%;
+    font-size: 45px;
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    @include xs {
+        display: none;
+    }
+}
+
+.owl-prev, .owl-next {
+    outline: none;
+    span {
+        color: $yellow;
+    }
+    
+}
+
+.owl-dots {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    text-align: center;
+    @include xxs {
+        bottom: 25px;
+    }
+}
+
+.owl-carousel button {
+    border: none;
+
+}
+
+.owl-carousel button.owl-dot {
+    width: 23px;
+    height: 1px;
+    margin: 0 10px;
+    z-index: 9999;
+    background: $blue-d;
+    @include xxs {
+
+    }
+}
+
+.owl-carousel button.owl-dot.active {
+    background: $yellow;
+}
+
+
+.cup_name {
+    color: $white;
+    font-size: 45px;
+    text-transform: uppercase;
+    font-family: 'Proxima Nova Th';
+    font-weight: 800;
+    text-align: center;
+    padding: 63px 0;
+    span {
+        display: block;
+        font-size: 33px;
+        @include sm {
+            font-size: 21px;
+        }
+    }
+    @include sm {
+        padding: 20px 0;
+        font-size: 30px;
+    }
+}
+
+.cup {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    @include sm {
+        flex-wrap: wrap;
+        width: 60%;
+    }
+    @include xxs {
+        width: 75%;
+    }
+}
+
+.cup_info {
+    color: $white;
+    font-size: 14px;
+    font-family: 'Proxima Nova Lt';
+    font-weight: 600;
+}
+
+.about {
+    width: 580px;
+    margin: 0 auto;
+    color: #fff;
+    font-size: 18px;
+    font-family: 'Proxima Nova Lt';
+    font-weight: 600;
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: 365px;
+    @include sm {
+        width: 70%;
+        font-size: 17px;
+        height: auto;
+    }
+    @include xxs {
+        width: 84%;
+        font-size: 16px;
+    }
+}
+
+
+.cup_logo {
+    padding-right: 20px;
+    height: 45px;
+}
+
+
+.event_content {
+    margin: 0;
+}
+
+.event_content_item {
+    display: none;
+    padding: 20px;
+    margin-top: -1px;
+}
+
+.event_content_item.active {
+    display: block;
+}
+
+aside {
+    width: 339px;
+    @include xl {
+        width: 100%;
+        margin: 20px 0;
+    }
+    @include sm {
+        margin-top: 60px;
+    }
+}
+
+.bord_container {
+    background: $blue-d;
+    padding: 11px 10px;
+    height: 388px;
+    @include xl {
+        height: auto;
+    }
+}
+
+.bord_name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 5px;
+    width: 100%;
+    font-family: 'Proxima Nova Lt';
+    font-family: 16px;
+    font-weight: 600;
+    color: $yellow;
+    border-bottom: 1px solid $yellow;
+
+    span {
+        font-size: 12px;
+        img {
+            vertical-align: middle;
+        }
+    }
+}
+
+.event_data {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.month {
+    font-size: 12px;
+    font-family: 'Proxima Nova Lt';
+    font-weight: 600;
+    color: $yellow;
+    padding-left: 10px;
+    border-left: 1px solid $yellow;
+}
+
+.event_tab_header {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    font-family: 'Proxima Nova Lt';
+    font-weight: 600;
+    color: $blue-b;
+}
+
+.event_tab_item {
+    width: 23px;
+    text-align: center;
+    cursor: pointer;
+    margin-right: 6px;
+}
+
+.event_tab_item.active {
+    color: $yellow;
+    box-shadow: 0px 1px 0px 0px $yellow;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.event_content {
+    padding: 0;
+}
+
+.event_teams {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Proxima Nova Lt';
+    font-weight: 600;
+    font-size: 12px;
+    color: $white;
+    @include xs {
+        justify-content: start;
+    }
+}
+
+.event_team {
+    width: 100%;
+    line-height: 1.6;
+    border-bottom: 1px solid $blue-b;
+    @include xl {
+        justify-content: space-between;
+        width: 100%;
+        display: flex;
+    }
+    @include sm {
+        flex-wrap: wrap;
+    }
+    @include xs {
+        width: 210px;
+    }
+}
+
+.event_game {
+    width: 40px;
+}
+
+.vs {
+    color: $yellow;
+    padding: 0 5px;
+}
+
+.event_tournamnt {
+    color: $blue-a;
+    padding-bottom: 3px;
+}
+
+.event_team_box {
+    span{
+        img {
+            vertical-align: middle;
+            padding-right: 4px;
+        }
+    }
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 25px 0;
+    cursor: pointer;
+    a {
+        cursor: pointer;
+        display: block;
+        padding: 0 15px;
+        @include xs {
+            padding: 0 5px;
+        }
+    }
+    @include xl {
+        justify-content: center;
+        margin-top: 0;
+    }
+    @include xs {
+      flex-wrap: wrap;
+      padding: 0;
+    }
+}
+
+.teams {
+    color: $white;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-family: 'Proxima Nova Lt';
+    font-weight: 600;
+    text-align: center;
+    span {
+        img {
+           vertical-align: middle;
+        }
+    }
+    @include sm {
+        margin: 53px 0;
+    }
+}
+
+.cup_team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 16px;
+    color: $white;
+    font-family: 'Proxima Nova Lt';
+    font-weight: 300;
+    line-height: 2;
+    @include sm {
+        width: 140px;
+    }
+    @include xs {
+        width: 230px;
+    }
+    @include xxs {
+        width: 265px;
+    }
+}
+
+.cup_team_s {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 16px;
+    color: $white;
+    font-family: 'Proxima Nova Lt';
+    font-weight: 300;
+    line-height: 2;
+    @include xl {
+        width: 140px;
+    }
+    @include sm {
+        width: 140px;
+    }
+}
+
+.team_block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+    @include xs {
+        flex-wrap:  wrap;
+    }
+}
+
+.team_logo {
+    width: 53%;
+}
+
+.data {
+    display: flex;
+    flex-direction: column;
+    line-height: 2;
+    span {
+        font-size: 18px;
+        font-family: 'Proxima Nova Lt';
+        color: $white;
+        font-weight: 600;
+    }
+    .day {
+        font-weight: 400;
+        color: $yellow;
+    }
+}
+
+.anons {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 370px;
+    justify-content: center;
+}
+
+.anams_vs {
+    font-size: 55px;
+    color: $yellow;
+    font-family: 'Proxima Nova Th';
+    font-weight: 800;
+}
+
+.anons_team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    span {
+        font-family: 'Proxima Nova Lt';
+        font-weight: 600;
+        padding: 10px 0;
+        color: $white;
+        font-size: 21px;
+        text-transform: uppercase;
+        @include sm {
+            font-size: 14px;
+        }
+    }
+    img {
+        @include sm {
+            width: 85px;
+        }
+    }
+}
+
+.anons_info {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 694px;
+    height: 406px;
+    -webkit-box-shadow: 0px 0px 0px 1px #FCEE21;
+    box-shadow: 0px 0px 0px 1px #FCEE21;
+    background: #011E6F;
+    @include sm {
+        width: auto;
+    }
+}
+
+.tournament {
+    text-transform: uppercase;
+    background: url(../img/tournament.jpg) no-repeat;
+    background-size: cover;
+    display: flex;
+    font-family: 'Proxima Nova Th';
+    font-weight: 800;
+    align-items: center;
+    justify-content: space-between;
+    height: 116px;
+    border: 1px solid $yellow;
+    @include sm {
+        flex-wrap: wrap;
+        height: 250px;
+        margin: 15px 0;
+        height: auto;
+    }
+    @include xxs {
+        background: $blue-d;
+    }
+}
+
+.tournament_param {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    @include sm {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+        width: 100%;
+    }
+}
+
+.t_name {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 350px;
+    @include sm {
+        width: 100%;
+        padding: 20px 0;
+    }
+}
+
+.t_cup {
+    color: $yellow;
+    font-family: 'Proxima Nova Th';
+    font-weight: 800;
+    font-size: 24px;
+}
+
+.t_card {
+    display: flex;
+    flex-direction: column;
+    width: 120px;
+    text-align: center;
+    @include sm {
+        padding: 15px 0;
+    }
+}
+
+.t_subname {
+    color: $white;
+    font-size: 18px;
+}
+
+.t_text {
+    color: $yellow;
+    font-size: 14px;
+    line-height: 1.5;
+    padding-top: 5px;
+    font-family: 'Proxima Nova Lt';
+    font-weight: 600;
+}
+
+.t_figure {
+    font-size: 21px;
+    color: $white;
+}
+
+.information {
+    display: flex;
+    align-items: center;
+    max-width: 85%;
+    margin: 0 auto;
+    font-family: 'Proxima Nova Lt';
+    font-weight: 600;
+    color: $white;
+    font-weight: 800;
+    font-size: 14px;
+    padding: 30px;
+    @include sm {
+        flex-wrap: wrap;
+    }
+}
+
+.text {
+    @include sm {
+        order: 1;
+    }
+}
+
+.brand {
+    width: 100%;
+    text-align: center;
+}
+
+.mob {
+    display: block;
+    @include sm {
+        display: none;
+    }
+}
+
+.net-top {
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: -20px;
+        background: url(../icon/nat.svg) no-repeat;
+        width: 16px;
+        height: 16px;
+        @include sm {
+            top: 21px;
+        }
+        @include xs {
+            display: none;
+        }
+    }
+}
+
+.net {
+    color: $white;
+    text-transform: lowercase;
+    position: relative;
+    cursor: pointer;
+    &::before {
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: -20px;
+        background: url(../icon/nat.svg) no-repeat;
+        width: 16px;
+        height: 16px;
+    }
+    &:hover {
+        color: $yellow;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: -20px;
+            background: url(../icon/nat-y.svg) no-repeat;
+            width: 16px;
+            height: 16px;
+        }
+    }
+}
+
+
+.footer_bg {
+    background: $dark;
+}
+
+footer {
+    width: 1170px;
+    margin: 0 auto;
+    @include xl {
+        width: 900px;
+    }
+    @include md {
+        width: 768px;
+    }
+    @include sm {
+        width: 414px;
+    }
+    @include xs {
+        width: 290px;
+    }
+}
+
+.f_links {
+    width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: start;
+    font-family: 'Proxima Nova Lt';
+    font-weight: 300;
+    padding: 0 30px;
+    margin-bottom: 20px;
+    line-height: 4;
+    @include xl {
+        width: auto;
+    }
+    .site1 {
+        display: inline-block;
+        width: 130px;
+        color: $blue;
+        font-size: 16px;
+        position: relative;
+        &:before {
+            content: '';
+            background: url(../icon/nat-b.svg) no-repeat;
+            width: 24px;
+            height: 24px;
+            position: absolute;
+            top: 20px;
+            left: -35px;
+        }
+    }
+    .site2 {
+        display: inline-block;
+        width: 130px;
+        color: $blue;
+        font-size: 16px;
+        position: relative;
+        &:before {
+            content: '';
+            background: url(../icon/nat-b-full.svg) no-repeat;
+            width: 24px;
+            height: 24px;
+            position: absolute;
+            top: 20px;
+            left: -35px;
+        }
+    }
+    
+}
+
+.copyright {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    @include sm {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+.f_info {
+    font-family: 'Proxima Nova Lt';
+    font-weight: 600;
+    color: $white;
+    font-size: 12px;
+    padding: 0 10px;
+}
+
+.f_social {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    cursor: pointer;
+}
+
+.rigth {
+    font-family: 'Proxima Nova Lt';
+    font-weight: 600;
+    text-align: center;
+    font-size: 0;
+}
+
+.block {
+    background: url(../img/game.png) no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+.parameters {
+    color: $white;
+    text-transform: uppercase;
+    font-size: 18px;
+    margin: 0;
+    padding: 35px 0;
+}
+
+.game_header {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    color: $blue-b;
+    font-size: 18px;
+    padding-bottom: 20px;
+}
+
+.game {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.game_content {
+    list-style: none;
+    padding: 0;
+}
+
+.g_team {
+    display: block;
+    text-align: center;
+    width: 125px;
+}
+
+.g_name {
+    color: $white;
+    font-size: 18px;
+    font-family: 'Proxima Nova Lt';
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.game_parameters {
+    font-family: 'Proxima Nova Lt';
+    font-weight: 600;
+    color: $white;
+    text-align: center;
+}
+
+.game_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid $blue;
+    @include sm {
+        flex-wrap: wrap;
+    }
+}
+
+.g_lose {
+    color: $pink;
+    font-size: 49px;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-family: 'Proxima Nova Th';
+    padding-top: 25px;
+}
+
+.g_win {
+    color: $yellow;
+    font-size: 49px;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-family: 'Proxima Nova Th';
+    padding-top: 25px;
+}
+
+.left {
+    width: 100%;
+    @include sm {
+        order: 2;
+    }
+}
+
+.rigth {
+    width: 100%;
+    @include sm {
+        order: 1;
+    }
+}
+
+.game_content_item {
+    display: none;
+    padding:  30px 20px;
+    margin-top: -1px;
+}
+
+.game_content_item.active {
+    display: block;
+}
+
+.game2_content_item {
+    display: none;
+    padding:  30px 20px;
+    margin-top: -1px;
+}
+
+.game2_content_item.active {
+    display: block;
+}
+
+.game2_content {
+    list-style: none;
+    padding-left: 0;
+}
+
+.game_item {
+    cursor: pointer;
+    padding-bottom: 19px;
+    &:hover {
+        color: $yellow;
+        transition: .2s;
+        box-shadow: 0px 2px 0px 0px $yellow;
+    }
+}
+
+
+.cup_tournament, .cup_tournament_sea {
+    height: 331px;
+    @include xs {
+        height: 304px;
+        width: 300px;
+        overflow: hidden;
+        overflow-x: auto; 
+    }
+}
+
+.cup_tournament_prew, .cup_tournament_sea {
+    height: 331px;
+    @include xs {
+        width: 300px;
+        height: 331px;
+        overflow: hidden;
+        overflow-x: auto; 
+    }
+}
+
+
+
+.cup_final {
+    font-family: 'Proxima Nova Lt';
+    font-weight: 600;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 99;
+    &:after {
+        content: '';
+        background: url(../img/pic.png) no-repeat;
+        position: absolute;
+        width: 309px;
+        height: 273px;
+        z-index: -1;
+    }
+    @include sm {
+        margin-top: 40px;
+    }
+}
+
+.final {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    padding-top: 15px;
+}
+
+.final_title {
+    font-size: 24px;
+    color: $white;
+}
+
+.final_sub {
+    color: $yellow;
+    font-size: 18px;
+}
+
+.small_final {
+    color: $pink;
+    padding: 20px 0;
+}
+
+.cup_grid {
+    display: flex;
+    justify-content: space-evenly;
+    @include sm {
+        flex-wrap: wrap;
+    }
+}
+
+.cup_anons {
+    font-family: 'Proxima Nova Lt';
+    font-weight: 600;
+    color: $white;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.mobile_menu {
+    display: none;
+    @include sm {
+        order: 2;
+        display: block;
+    }
+}
+
+.top-nav {
+    width: 100%;
+}
+.group {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+}
+
+.subnav {
+    display: none;
+    position: absolute;
+    top: 55px;
+    right: 0;
+    width: 100%;
+    background: $blue-d;
+    text-align: center;
+    li {
+        .pages {
+            font-size: 18px;
+            display: block;
+            padding: 20px 0px;
+            color: $white;
+            cursor: pointer;
+        }
+    }
+}
+
+.drop-menu-toggle {
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+    img {
+        padding: 0 10px;
+    }
+}
+
+.m_grid {
+    display: none;
+    @include sm {
+        display: block;
+        img {
+            width: 300px;
+        }
+    }
+}
+
+// .cup_tournament_prew {
+//     @include sm {
+//         display: none;
+//     }
+// }
+
+// main page 2
+
+.top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 0;
+    align-items: center;
+    @include sm {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.top_right {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    @include sm {
+        flex-direction: column;
+    }
+}
+
+.top_social {
+    cursor: pointer;
+    padding-right: 30px;
+    img {
+        padding: 0 15px;
+        @include sm {
+            padding: 0 10px;
+        }
+    }
+    @include sm {
+        padding: 15px 0;
+    }
+}
+
+.glob {
+    color: $white;
+    font-family: 'Proxima Nova Lt';
+    font-weight: 600;
+    position: relative;
+    margin-left: 34px;
+    &:before {
+        content: '';
+        background: url(../img/main/cyber.svg) no-repeat;
+        position: absolute;
+        left: -30px;
+        width: 24px;
+        height: 21px;
+    }
+}
+
+.main_title {
+    text-align: center;
+    color: $white;
+    font-size: 21px;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-family: 'Proxima Nova Th';
+    margin-top: 20px;
+}
+
+.cup_card {
+    margin-bottom: 30px;
+    opacity: 1;
+    a {
+        display: block;
+        .card1 {
+            background: url(../img/main/cup_1.png) no-repeat;
+            background-size: cover;
+            width: 273px;
+            height: 350px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            img {
+                padding-top: 40px;
+            }
+        }
+        .card2 {
+            background: url(../img/main/cup_2.png) no-repeat;
+            background-size: cover;
+            width: 273px;
+            height: 350px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            border: 1px solid $pink;
+            border-radius: 8px;
+            img {
+                padding-top: 40px;
+            }
+        }
+        .card3 {
+            background: url(../img/main/cup_3.png) no-repeat;
+            background-size: cover;
+            width: 273px;
+            height: 350px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            border: 1px solid $pink;
+            border-radius: 8px;
+            img {
+                padding-top: 40px;
+            }
+        }
+        .card4 {
+            background: url(../img/main/cup_4.png) no-repeat;
+            background-size: cover;
+            width: 273px;
+            height: 350px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            img {
+                padding-top: 40px;
+            }
+        }
+        .cup_subcard {
+            .csgo {
+                font-weight: 800;
+                font-family: 'Proxima Nova Th';
+                color: $yellow;
+                font-size: 18px;
+                text-transform: uppercase;
+                position: relative;
+                text-align: center;
+                padding: 25px 0;
+                &:before {
+                    content: '';
+                    background: url(../icon/main/csgo-y.svg) no-repeat;
+                    position: absolute;
+                    width: 27px;
+                    height: 27px;
+                    left: 75px;
+                    top: 21px;
+                }
+            }
+            .dota {
+                font-weight: 800;
+                font-family: 'Proxima Nova Th';
+                color: $yellow;
+                font-size: 18px;
+                text-transform: uppercase;
+                position: relative;
+                text-align: center;
+                padding: 25px 0;
+                &:before {
+                    content: '';
+                    background: url(../icon/main/dota-y.svg) no-repeat;
+                    position: absolute;
+                    width: 27px;
+                    height: 27px;
+                    left: 55px;
+                    top: 21px;
+                }
+            }
+            .live {
+                color: $pink;
+                font-size: 14px;
+            }
+            .cup_subinfo {
+                display: flex;
+                justify-content: space-evenly;
+                border: 1px solid #032556;
+                border-radius: 10px;
+            }
+            .cup_pool {
+                text-align: center;
+                padding: 50px 0 15px 0;
+                span {
+                    display: block;
+                    font-weight: 600;
+                    font-family: 'Proxima Nova Lt';
+                    color: $yellow;
+                    font-size: 14px;
+                    text-transform: uppercase;
+                    position: relative;
+                    &:before {
+                        content: '';
+                        background: url(../icon/main/victory-y.svg) no-repeat;
+                        position: absolute;
+                        width: 26px;
+                        height: 23px;
+                        margin: 0px auto;
+                        left: 0;
+                        right: 0;
+                        top: -29px;
+                    }
+                }
+                .cup_integer {
+                    color: $white;
+                    font-size: 21px;
+                    font-family: 'Proxima Nova Th';
+                    font-weight: 800;
+                }
+            }
+            .cup_data {
+                text-align: center;
+                padding: 50px 0 15px 0;
+                span {
+                    display: block;
+                    font-weight: 600;
+                    font-family: 'Proxima Nova Lt';
+                    color: $yellow;
+                    font-size: 14px;
+                    text-transform: uppercase;
+                    position: relative;
+                    &:before {
+                        content: '';
+                        background: url(../icon/main/data-y.svg) no-repeat;
+                        position: absolute;
+                        width: 26px;
+                        height: 23px;
+                        margin: 0px auto;
+                        left: 0;
+                        right: 0;
+                        top: -29px;
+                    }
+                }
+                .cup_integer {
+                    color: $white;
+                    font-size: 21px;
+                    font-family: 'Proxima Nova Th';
+                    font-weight: 800;
+                }
+            }
+        }
+    }
+    
+    &:hover {
+        cursor: pointer;
+        .card2, .card3   {
+            box-shadow: 0px 4px 40px rgba(210, 38, 38, 0.72);
+            transition: .2s;
+        }
+        .card1, .card4 {
+            box-shadow: 0px 4px 40px rgba(10, 2, 2, 0.733);
+            transition: .2s;
+        }
+    }
+}
+
+.card4 {
+    background: url(../img/main/cup_4.png) no-repeat;
+    background-size: cover;
+    width: 273px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    img {
+        padding-top: 40px;
+    }
+}
+
+.cup_title {
+    font-weight: 800;
+    font-family: 'Proxima Nova Th';
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card_promo {
+    color: $yellow;
+    font-size: 12px;
+    padding: 5px;
+}
+
+.cup_card_name {
+    color: $white;
+    font-size: 21px;
+}
+
+.cup_subname {
+    color: $white;
+    font-size: 18px;
+}
+
+.cup_data {
+    font-size: 14px;
+    font-weight: 800;
+    font-family: 'Proxima Nova Th';
+    text-transform: uppercase;
+}
+
+.cup_number {
+    color: $white;
+}
+
+.cup_month {
+    color: $pink;
+}
+
+.cup_month-y {
+    color: $yellow;
+}
+
+.cup_card_container {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+    flex-wrap: wrap;
+    @include xl {
+        max-width: 810px;
+        margin: 0 auto;
+    }
+}
+
+.promotion {
+    background: url(../img/promo.png) no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    color: $white;
+
+    font-weight: 800;
+    font-family: 'Proxima Nova Th';
+    text-transform: uppercase;
+    text-align: center;
+    padding: 127px 0;
+    text-shadow: 1px 4px 6px #000;
+    .get {
+        font-size: 35px;
+    }
+    .promocode {
+        color: $yellow;
+        font-size: 55px;
+    }
+    @include sm {
+        padding: 142px 0;
+    }
+    @include xs {
+        padding: 178px 0;
+    }
+}
+
+.promotion-2 {
+    background: url(../img/promo2.png) no-repeat;
+    background-size: cover;
+    color: $white;
+    font-weight: 800;
+    font-family: 'Proxima Nova Th';
+    text-transform: uppercase;
+    padding: 97px 0;
+    text-shadow: 1px 4px 6px #000;
+    line-height: 1.5;
+    p {
+        width: 70%;
+        margin: 10px auto;
+    }
+    ul {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+}
+
+.top {
+    .logo {
+        img {
+            height: 100px;
+        }
+    }
+}
+
+.promo {
+    color: $blue;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 10px;
+    .p_title {
+        font-size: 14px;
+        font-weight: 600;
+        font-family: 'Proxima Nova Lt';
+        padding: 0 5px;
+        @include xs {
+            font-size: 11px;
+        }
+    }
+    .p_code {
+        color: $pink;
+        font-size: 18px;
+        font-weight: 800;
+        font-family: 'Proxima Nova Th';
+        text-transform: uppercase;
+        padding-right: 10px;
+        @include xs {
+            font-size: 14px;
+        }
+    }
+    @include xs {
+        flex-wrap: wrap;
+    }
+    @include xxs {
+        display: none;
+    }
+}
